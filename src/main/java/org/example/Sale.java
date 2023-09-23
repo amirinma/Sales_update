@@ -80,4 +80,26 @@ public class Sale {
             return (name.equals(otherSale.name) && price == otherSale.price);
         }
     }
+    public Sale clone(){
+        return new Sale(this);
+    }
+
+    // clone method practise
+    public static Sale[] goodCopy(Sale[] args){
+        Sale[] b = new Sale[args.length];
+        for (int i = 0; i < args.length; i++){
+            b[i] = args[i].clone();
+        }
+        return b;
+    }
+
+    public static Sale[] badCopy(Sale[] a){
+        Sale[] b = new Sale[a.length];
+        for (int i = 0; i < a.length; i++)
+            b[i] = new Sale(a[i]);
+        return b;
+    }
+
+
+
 }

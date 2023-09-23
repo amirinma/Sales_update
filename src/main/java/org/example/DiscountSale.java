@@ -37,4 +37,24 @@ public class DiscountSale extends Sale{
                 getName() + " Price = $" + getPrice() + " Discount = " + discount + "%\n" + " Total cost = $" + bill()
                 );
     }
+    public DiscountSale clone(){
+        return new DiscountSale(this);
+    }
+
+    // clone method practise
+    public static Sale[] goodCopy(Sale[] args){
+        Sale[] b = new Sale[args.length];
+        for (int i = 0; i < args.length; i++){
+            b[i] = args[i].clone();
+        }
+        return b;
+    }
+
+    public static Sale[] badCopy(Sale[] a){
+        Sale[] b = new Sale[a.length];
+        for (int i = 0; i < a.length; i++)
+            b[i] = new Sale(a[i]);
+        return b;
+    }
+
 }
