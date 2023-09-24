@@ -22,9 +22,6 @@ public class CopyingDemo extends Sale{
             System.out.println("b[" + i + "] = " + b[i]);
             System.out.println("Good Copy Ended!");
         }
-
-
-
-
+        System.out.println("Test for repo!");
     }
 }
